@@ -63,3 +63,25 @@ for lokasi, data in data_panen.items():
     padi = data['hasil_panen']['padi']
     kedelai = data['hasil_panen']['kedelai']
     print(f"{nama}: Padi = {padi}, Kedelai = {kedelai}")
+
+# 6. Percabangan kondisi perhatian khusus
+# Menyimpan jumlah lokasi yang memerlukan perhatian khusus
+lokasi_perlu_perhatian = 0
+lokasi_dalam_kondisi_baik = 0
+
+# Status lokasi berdasarkan hasil panen
+print("\nStatus lokasi berdasarkan hasil panen:")
+for lokasi, data in data_panen.items():
+    padi = data['hasil_panen']['padi']
+    jagung = data['hasil_panen']['jagung']
+    
+    if padi > 1300 or jagung > 800:
+        print(f"{data['nama_lokasi']} memerlukan perhatian khusus.")
+        lokasi_perlu_perhatian += 1
+    else:
+        print(f"{data['nama_lokasi']} dalam kondisi baik.")
+        lokasi_dalam_kondisi_baik += 1
+
+# Kesimpulan
+print(f"Jumlah lokasi yang memerlukan perhatian khusus: {lokasi_perlu_perhatian}")
+print(f"Jumlah lokasi yang dalam kondisi baik: {lokasi_dalam_kondisi_baik}")
