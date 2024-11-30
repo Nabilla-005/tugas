@@ -87,4 +87,4 @@ for lokasi, data in data_panen.items():
 print(f"Jumlah lokasi yang memerlukan perhatian khusus: {lokasi_perlu_perhatian}")
 print(f"Jumlah lokasi yang dalam kondisi baik: {lokasi_dalam_kondisi_baik}")
 
-print("ubah branch master")
+print ("ini adalah gabungan dari branch master dan branch Baru")
